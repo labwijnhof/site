@@ -1,2 +1,7 @@
 # site
-Main LAB WIjnhof Site
+Huidige LAB Wijnhof pagina.
+
+
+Deployment van [Hugo](https://gohugo.io/) SSG via Cloudflare:
+
+https://labwijnhof.nl/
