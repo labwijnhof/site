@@ -1,0 +1,27 @@
+{{ partial "header.html" . }}
+
+{{ partial "nav.html" . }}
+
+<br class="cf">
+
+<!--Content-->
+<section class="w-100 mw8-ns center cf" id="list">
+
+    <div class="center lh-copy ph2 f6 f5-m f4-ns">
+        {{ range .Data.Pages }}
+        <a class=" link overflow-hidden" href="{{ .Permalink}}" title="{{ .Title }}" >
+            
+            <div class="fl w-50">
+                <div class="center pv3">
+                    <h1 class="purple tc">{{ .Title }}</h1>
+                </div>
+                    <div role="img" class=" aspect-ratio--16x9" style="background-image: url('{{ .Params.FeaturedImage }}') ; background-size: cover; background-repeat: no-repeat; background-position: center center;" >
+                    </div>
+            </div>
+        </a>
+        {{ end }}
+    </div>
+</section>
+
+{{ partial "footer.html" . }}
+

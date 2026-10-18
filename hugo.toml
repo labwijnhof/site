@@ -1,0 +1,82 @@
+baseURL = "https://labwijnhof.nl/"
+languageCode = "nl-NL"
+title = "LAB Wijnhof"
+theme = "labw"
+enableEmoji = false 
+MetaDataFormat = "toml"
+sectionPagesMenu = "main"
+pluralizelisttitles = "false"
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[params]
+    Intro = "LAB Wijnhof is gevestigd in het voormalige Kompaan College aan de Wijnhofstraat en groeit uit tot een dynamische plek van creatie, experimenten en verbinding. Wat ooit een schoolgebouw was, is nu een inspirerende omgeving waar kunstenaars, makers en ambachtslieden samenkomen."
+    AddressLine1 = "Wijnhofstraat 1"
+    AddressLine2 = "7203DV Zutphen, The Netherlands"
+    GoogleMaps =  "https://maps.app.goo.gl/xrgqcRKCCDJ5vJzA7"
+    Email = "info@wijnhofstraat.nl"
+    Instagram = "LABWijnhof"
+    MainColor = "#21A94A"
+    SecondaryColor = "#CCE4B7"
+    HighlightColor = "#E78524"
+    
+[menu]
+# [[menu.main]]
+#   pageRef="/"
+#   name = 'home'
+#   url = '/'
+#   weight = 1
+[[menu.main]]
+  pageRef="over"  
+  name = 'over'
+  url = '/over'
+  weight = 2
+[[menu.main]]
+  pageRef="agenda"
+  name = 'agenda'
+  url = '/agenda'
+  weight = 3
+[[menu.main]]
+  pageRef="lokalen"
+  id = "purple"
+  identifier = "lokalen"
+  name = 'Atelier Huren?'
+  url = '/lokalen'
+  weight = 3
+[[menu.main]]
+  pageRef="nieuws"
+  name = 'nieuws'
+  url = '/nieuws'
+  weight = 4
+[[menu.main]]
+  pageRef="plattegrond"
+  name = 'plattegrond'
+  url = '/plattegrond'
+  weight = 5
+[[menu.main]]
+  pageRef="verhuur"
+  id = "orange"
+  identifier = "verhuur"
+  name = 'Verhuur'
+  url = '/verhuur'
+  weight = 6
+[[menu.main]]
+  pageRef="contact"
+  name = 'contact'
+  url = '/contact'
+  weight = 8
+
+# [permalinks]
+#   nieuws = "nieuws/:title"
+#   lokalen = "lokalen/:title"
+  
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true

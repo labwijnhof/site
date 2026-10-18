@@ -1,0 +1,29 @@
+<!--Navigation-->
+
+
+  {{ if .IsHome }}
+  <header class="vh-100 dt w-100"><div style="background:url(../img/LABW_Header_001.jpg) no-repeat center center;background-size: cover;" class="dtc">
+  {{ end }}
+
+
+  {{ if ne .IsHome true }}
+  <header class="vh-25 dt w-100"><div style="background:url(../img/LABW_Header_002.jpg) no-repeat center center;background-size: cover;" class="dtc">
+  {{ end }}
+  
+  <nav class="center w-100 mw8-ns" id="navigation">
+    <span>
+        <a href="{{ .Site.BaseURL }}" class="fl f5 link pa2"><img src="{{ .Site.BaseURL }}img/logo_labw_short.svg" class="h2"></a>
+    </span>
+    <ul class="w-100 mt3" id="menu">
+         
+      {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}" {{ with .Params.rel }}rel="{{ . }}"{{ end }} class="fl f5 link br-pill pa3 mr2 mb2 ttu b dib white dim">
+            {{ .Name }}
+          </a>
+      {{ end }}
+    </ul>
+  </nav>
+
+</div></header>
+
+

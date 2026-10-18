@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+
+{{ partial "nav.html" . }}
+
+<br class="cf">
+
+<!--Content-->
+<section class="w-100 mw8-ns center cf" id="content">
+	<article class="center lh-copy ph2 f6 f5-m f4-ns">
+
+		<h1 class="lh-copy ph4 tc" id="title">{{ .Title }}</h1>
+
+    	<img src="{{ .Params.FeaturedImage }}" class="w-100" />
+
+	    {{ .Content }}
+	</article>
+    
+</section>
+
+{{ partial "footer.html" . }}
+

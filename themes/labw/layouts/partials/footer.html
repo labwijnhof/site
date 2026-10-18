@@ -1,0 +1,34 @@
+<footer id="footer" class="w-100 center cf mt5 mt2" style="background-color: #CCE4B7;">
+    <section class="w-100 w-25-l w-50-m pa4 fl">
+        <h4 class="fw7 ttu">Adres</h4>
+        <span class="lh-copy db">{{ .Site.Params.AddressLine1 }}</span>
+        <span class="lh-copy db">{{ .Site.Params.AddressLine2 }}</span>
+        <span class="lh-copy db"><a href="{{ $.Site.Params.GoogleMaps }}" target="_blank" class="link dim">Google Maps ↬</a></span>
+    </section>
+
+    <section class="w-100 w-25-l w-50-m pa4 fl">
+        <h4 class="fw7 ttu ">Info </h4> 
+        <span class="lh-copy db">Eerlijk gemaakt met AI, door <a href="https://ikbenke.es" class="dim link ">Ikbenkees</a>.</span>
+
+        <span class="lh-copy db">Op basis <a href="https://gohugo.io" class="dim link ">Hugo</a> &amp; <a href="//tachyons.io" class="dim link"> Tachyons</a><br>Met dank aan <a href="https://https://cloudflare.com" class="dim link ">Cloudflare</a>. </span>  
+    </section>
+
+    <section class="w-100 w-25-l w-50-m pa4 fl">
+    	<h4 class="fw7 ttu ">Contact</h4>
+        <span class="lh-copy db">Email: <a class="link dim " href="mailto: /{{ $.Site.Params.Email }}">info@labwijnhof.nl</a></span>
+        <span class="lh-copy db">Instagram: <a class="link dim " href="http://instagram.com/{{ $.Site.Params.Instagram }}" target="_blank">@LABWijnhof</a></span>
+    </section>
+
+    <section class="w-100 w-25-l w-50-m pa4 fl">
+    	<h4 class="fw7 ttu ">In samenwerking met:</h4>
+
+        <a href="https://zutphen.nl/" target="_blank"><img class="h4 mv2 cf" src="{{ .Site.BaseURL }}img/logo_zutphen.png" /><br/></a>
+        <a href="https://destadmaker.nl/" target="_blank"><img class="w5 mv2 cf" src="{{ .Site.BaseURL }}img/logo_stadmaker.png" /></a>
+	</section>
+</footer>
+  
+{{ partial "scripts.html" . }}
+
+</body>
+
+</html>

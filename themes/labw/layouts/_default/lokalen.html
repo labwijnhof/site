@@ -1,0 +1,55 @@
+{{ partial "header.html" . }}
+
+{{ partial "nav.html" . }}
+
+<br class="cf">
+
+<!--Content-->
+<section class="w-100 mw8-ns center cf" id="lokalen">
+    <article class="center lh-copy ph2 f6 f5-m f4-ns">
+        <h1 class="lh-copy ph4 tc" id="title">Ruimte huren?</h1>
+
+        <p>Ben jij op zoek naar een creatieve werkplek, een plek waar je anderen kunt ontmoeten en samen kunt bouwen aan iets groters? Kom huren bij LAB Wijnhof!</p>
+        <p>Wat maakt huren bij ons interessant?
+
+            <ul>
+                <li>Je wordt onderdeel van een creatief netwerk van makers en doeners.</li>
+                <li>Je kan gebruik maken van de gezamenlijke ontmoetingsruimte, het plein en een gedeelde keuken.</li>
+                <li>Je krijgt de vrijheid om je atelier of werkplek naar eigen wens te verbouwen..</li>
+                <li>Je bent zichtbaar door gezamenlijke evenementen en communicatie.</li>
+                <li>Je kan nieuwe samenwerkingen aangaan en faciliteiten delen met andere huurders. Zoals met de Stadswerkplaats die een grote hout- en metaalwerkplaats hebben.</li>
+            </ul>
+        </p>
+
+        <p>Bekijk de beschikbare ruimtes hieronder:</p>
+    </article>
+
+    <section id="list">
+            <main class="mw8 center cf">
+                {{ range where .Site.RegularPages "Section" "lokalen" }}
+                <a class=" link overflow-hidden" href="{{ .Permalink}}" title="{{ .Title }}" >
+                    <div class="fl w-100-l mt3 w-50">
+                        <div class="center pv3">
+                            <h1 class="purple tc">{{ .Title }}</h1>
+                        </div>
+                            <div role="img" class=" aspect-ratio--16x9" style="background-image: url('{{ .Params.FeaturedImage }}') ; background-size: cover; background-repeat: no-repeat; background-position: center center;" >
+                            </div>
+                    </div>
+                </a>
+                {{ end }}
+            </main>
+    </section>
+
+    <article class="center lh-copy ph2 f6 f5-m f4-ns">
+        <h2 class="lh-copy ph4 tc" id="title">Ruimte Delen?</h2>
+
+        <p>Omdat de ruimtes vrij groot zijn stimuleren we deelgebruik: ideaal voor bestaande collectieven of makers die graag samenwerken of zich laten inspireren door anderen. Zo blijft huren betaalbaar en ontstaan er nieuwe verbindingen en samenwerkingen.</p>
+        <p>Heb je zelf geen collectief of ken je geen medehuurders, maar sta je wel open om een ruimte te delen? Laat het ons weten via het contactformulier, wij organiseren regelmatig matchingsmomenten. <a href="https://docs.google.com/forms/d/e/1FAIpQLSfthGDGtESAkS5uPL4PxVjfobtR9hTRRPJi2XbbZ84iywCeLA/viewform?usp=header">Meld je aan via het Contactformulier</a>.</p>
+    </article>
+
+</section>
+
+
+{{ partial "footer.html" . }}
+
+

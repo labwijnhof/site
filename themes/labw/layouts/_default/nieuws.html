@@ -1,0 +1,27 @@
+{{ partial "header.html" . }}
+
+{{ partial "nav.html" . }}
+
+<br class="cf">
+
+<!--Content-->
+<section class="w-100 mw8-ns center cf" id="news">
+    <div class="center lh-copy ph2 f6 f5-m f4-ns">
+
+        <h1 class="lh-copy ph4 tc" id="title">Laatste Nieuws</h1>
+
+        {{ range where .Site.RegularPages "Section" "nieuws" }}
+
+            {{ $format := "2 January 2006" }}
+            
+            <div class="w-100 w-50-ns fl">
+                <a href="{{ .Permalink}}" title="{{ .Title }}" class="">
+                      <h2>{{ .Title }}</h2>      
+                </a>
+                <span class="tc"> Gepubliceerd op: {{ .Date.Format $format }} </span>
+            </div>
+        {{ end }}
+    </div>
+</section>
+
+{{ partial "footer.html" . }}

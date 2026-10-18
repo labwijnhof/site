@@ -1,0 +1,15 @@
+name = "Lab Wijnhof"
+license = "MIT"
+description = "Simple theme for Hugo with Tachyons as CSS framework"
+homepage = "https://labwijnhof.nl"
+tags = ["minimal", "tachyons", "responsive", "syntax highlighting", "google analytics", "collective"]
+features = ["collective","list","carousel","tachyons"]
+min_version = "0.1"
+
+primary = "#21A94A"
+secondary = "#CCE4B7"
+highlight = "#E78524"
+
+[author]
+  name = "Kees Plattel"
+  homepage = "ikbenke.es"

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="{{ .Site.LanguageCode }}"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <!--*******************************************************
+    Name: Lab Wijnhof
+    URL: https://labwijnhof.nl
+    Author: Kees Plattel
+    Version: 0.2
+    ********************************************************--> 
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+    {{ partial "meta.html" . }}
+    {{ $baseurl := .Site.BaseURL }}
+
+    <title>🧪 LABW - {{ .Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}" />
+ 
+    {{ $title := .Title }}
+    {{ with .OutputFormats.Get "RSS" }}
+    <link
+      href="{{ .RelPermalink }}"
+      rel="alternate"
+      type="application/rss+xml"
+      title="{{ $title }}"
+    />
+    {{ end }}
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"/>
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" />
+
+    <link rel="shortcut icon" href="{{ .Site.BaseURL }}img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}img/apple-touch-icon.png" />
+  </head>
+
+  <body lang="{{ .Site.LanguageCode }}" style="font-family: 'Raleway', sans-serif;">
+
+  
+<!--   <div class="flex items-center justify-center pa4 bg-orange navy">
+    <svg class="w1 white" data-icon="info" viewBox="0 0 32 32" style="fill:currentcolor">
+      <title>info icon</title>
+      <path d="M16 0 A16 16 0 0 1 16 32 A16 16 0 0 1 16 0 M19 15 L13 15 L13 26 L19 26 z M16 6 A3 3 0 0 0 16 12 A3 3 0 0 0 16 6"></path>
+    </svg>
+    <span class="lh-title ml3 white">Er zijn nog <a class="white"  href="{{ .Site.BaseURL }}/lokalen">lokalen</a> te huur en te delen! Kom je ook naar de <a class="white"  href="{{ .Site.BaseURL }}/nieuws/matchingmiddag/">matching middag</a> op 6 januari?</span>
+  </div> -->
+

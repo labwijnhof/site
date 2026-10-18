@@ -1,0 +1,66 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+{{if .Keywords }}
+{{ range.Keywords }}<meta property="article:tag" content="{{ . }}" />
+{{ end }}
+{{else if isset .Params "tags" }}
+{{ range.Params.tags }}<meta property="article:tag" content="{{ . }}" />
+{{ end }}
+{{ end }}
+
+{{if .Site.Params.twitter }}
+
+{{ end }}
+
+<meta name="title" content="LAB Wijnhof - Lichtelijk Alternatieve Broedplaats in Zutphen">
+<meta name="description" content="LAB Wijnhof is een Lichtelijk Alternatieve Broedplaats in de oude praktijklokalen aan de Wijnhofstraat in Zutphen. Hier ontmoeten makers, denkers en doeners elkaar.">
+
+<!-- Open Graph / Facebook / LinkedIn / WhatsApp / Slack / Discord -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.labwijnhof.nl">
+<meta property="og:title" content="LAB Wijnhof - Lichtelijk Alternatieve Broedplaats in Zutphen">
+<meta property="og:description" content="LAB Wijnhof is een Lichtelijk Alternatieve Broedplaats in de oude praktijklokalen aan de Wijnhofstraat in Zutphen. Hier ontmoeten makers, denkers en doeners elkaar.">
+<meta name="twitter:image:src" content="{{ .Site.BaseURL }}img/labw_share.jpg.jpg" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.labwijnhof.nl">
+<meta name="twitter:title" content="LAB Wijnhof - Lichtelijk Alternatieve Broedplaats in Zutphen">
+<meta name="twitter:description" content="LAB Wijnhof is een Lichtelijk Alternatieve Broedplaats in de oude praktijklokalen aan de Wijnhofstraat in Zutphen.">
+<meta name="twitter:image" content="https://www.labwijnhof.nl/img/labw_share.jpg">
+<!-- <meta name="twitter:site" content="@labwijnhof"> optioneel -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}"/>
+<meta name="twitter:description" content="{{ .Description | default .Summary }}|{{ .Site.Params.Description }}" />
+<meta name="twitter:image:src" content="{{ .Site.BaseURL }}img/labw_share.jpg.jpg" />
+<meta name="twitter:domain" content="{{ .Permalink }}" />
+
+<!-- Pinterest (optioneel) -->
+<meta name="pinterest-rich-pin" content="true">
+
+<!-- Apple / iOS -->
+<meta name="apple-mobile-web-app-title" content="LAB Wijnhof">
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "LAB Wijnhof",
+  "image": "https://www.labwijnhof.nl/assets/images/broedplaats_logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Wijnhofstraat 12",
+    "addressLocality": "Zutphen",
+    "postalCode": "7203DV",
+    "addressCountry": "NL"
+  },
+  "url": "https://www.labwijnhof.nl",
+  "description": "Lichtelijk Alternatieve Broedplaats in Zutphen, gevestigd in de oude praktijklokalen aan de Wijnhofstraat."
+}
+</script>
